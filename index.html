@@ -1,45 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Code Quiz!</title>
-        <link rel="stylesheet" href="assests/css/style.css" />
-    </head>
-    <body>
-        <header>
-            <div>
-                <button class="btnHeader" id="view-high-scores"> 
-                View High Scores</button>
-            </div>
-            <div>
-                <p>Time: <span id="timeLeft">xxx</span></p>
-            </div>
 
-        </header>
-            <div id="wrapper">
-                <div id="start-screen" class="start">
-                    <p>
-                        Try to answer the following code-related questions
-                        within the time limit.  Keep in mind that incorrect
-                        answers will penalize your score/time by ten seconds!
-                    </p>
-                    <button id="start"> Start Quiz!</button>
-                </div>
-                <div id="questions" class="hide">
-                    <h2 id="question-title"></h2>
-                    <div id="choices" class="choices"></div>
-                </div>
-                <div id="end-screen" class="hide">
-                    <h2> Finished! </h2>
-                    <p> Your final score = <span id="final-score"></span></p>
-                    <p>
-                        Enter Initials: <input type="text" id="initials" max="3" />
-                        <button id="sumbit"> Submit </button>
-                    </p>
-                </div>
-            </div>
-        <script src="assests/js/script.js"></script>
-    </body>
+<html>
+
+<head>
+    <title>Code Quiz</title>
+    <meta charset="UTF-8">
+    <link href="assests/css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <div id="nav">
+        <!-- view scores link on the top left of nav bar-->
+        <div class="left">
+            <a onclick="getScore()" href="#">
+                <h4>View Highscore</h4>
+            </a>
+        </div>
+        <!-- countdown timer on the top right of nav bar-->
+        <div class="right">
+            <h4>Time: <span id="timeLeft">0</span></h4>
+        </div>
+    </div>
+    <!--main body of quiz-->
+    <div id="quiz">
+        <div id="quizBody">
+            <h1>
+                Code Quiz Challenge
+            </h1>
+            <h3>
+                Try to answer the following code-related questions within
+                the time limit.  Keep in mind that incorrects answers will
+                penalize your score/time by ten seconds!        
+            </h3>
+            <button onclick="start()">Start!</button>
+        </div>
+    </div>
+
+    <script src="assests/js/script.js" type="text/javascript"></script>
+</body>
+
 </html>
